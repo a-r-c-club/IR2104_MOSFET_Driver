@@ -1,2 +1,2 @@
-# IRF2104_MOSFET_Driver
-IRF2104 based MOSFET Driver
+# IR2104_MOSFET_Driver
+IR2104 based MOSFET Driver design modified by Himanshu Lodha

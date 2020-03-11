@@ -1,2 +1,2 @@
-# IR2104_MOSFET_Driver
-This repository contains all designs for IR2104 based MOSFET motor driver.
+# Motor Driver
+This repository contains all designs for motor driver designs made at VIIT Robotics.

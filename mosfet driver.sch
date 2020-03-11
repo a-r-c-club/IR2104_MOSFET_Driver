@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mosfet driver-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -150,11 +150,6 @@ $EndComp
 Wire Wire Line
 	5900 2500 5900 2550
 Connection ~ 3500 2500
-Wire Wire Line
-	4600 3100 4600 3000
-Connection ~ 4600 3000
-Wire Wire Line
-	4600 3000 4600 2900
 $Comp
 L Device:D_Zener D3
 U 1 1 5DD2A0A7
@@ -281,17 +276,6 @@ Wire Wire Line
 	3950 4600 4000 4600
 Wire Wire Line
 	5050 4000 5100 4000
-$Comp
-L power:GND #PWR017
-U 1 1 5DD2A11F
-P 5900 5100
-F 0 "#PWR017" H 5900 4850 50  0001 C CNN
-F 1 "GND" H 5905 4927 50  0000 C CNN
-F 2 "" H 5900 5100 50  0001 C CNN
-F 3 "" H 5900 5100 50  0001 C CNN
-	1    5900 5100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5300 4800 5300 4700
 Connection ~ 5900 4600
@@ -320,17 +304,6 @@ F 1 "IRF3205" H 6006 4855 50  0000 L CNN
 F 2 "Heatsink:heatsinknew" H 6050 4825 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5800 4900 50  0001 L CNN
 	1    5800 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J2
-U 1 1 5DD0C9C4
-P 7000 3600
-F 0 "J2" H 7080 3592 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 7080 3501 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7000 3600 50  0001 C CNN
-F 3 "~" H 7000 3600 50  0001 C CNN
-	1    7000 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -852,57 +825,38 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 5E2F50FA
-P 1000 6300
-F 0 "J1" H 1080 6292 50  0000 L CNN
-F 1 "PWR_IN" H 1080 6201 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 1000 6300 50  0001 C CNN
-F 3 "~" H 1000 6300 50  0001 C CNN
-	1    1000 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0125
-U 1 1 5E2F5939
-P 700 6250
-F 0 "#PWR0125" H 700 6100 50  0001 C CNN
-F 1 "VCC" H 717 6423 50  0000 C CNN
-F 2 "" H 700 6250 50  0001 C CNN
-F 3 "" H 700 6250 50  0001 C CNN
-	1    700  6250
+P 1350 5000
+F 0 "J1" H 1430 4992 50  0000 L CNN
+F 1 "PWR_IN" H 1430 4901 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 1350 5000 50  0001 C CNN
+F 3 "~" H 1350 5000 50  0001 C CNN
+	1    1350 5000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0126
 U 1 1 5E2F5B92
-P 750 7300
-F 0 "#PWR0126" H 750 7050 50  0001 C CNN
-F 1 "GND" H 755 7127 50  0000 C CNN
-F 2 "" H 750 7300 50  0001 C CNN
-F 3 "" H 750 7300 50  0001 C CNN
-	1    750  7300
+P 600 5500
+F 0 "#PWR0126" H 600 5250 50  0001 C CNN
+F 1 "GND" H 605 5327 50  0000 C CNN
+F 2 "" H 600 5500 50  0001 C CNN
+F 3 "" H 600 5500 50  0001 C CNN
+	1    600  5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	700  6300 700  6250
-Wire Wire Line
-	800  7350 750  7350
-Wire Wire Line
-	750  7350 750  7400
+	600  4650 600  4600
 $Comp
 L power:VCC #PWR0127
 U 1 1 5E302687
-P 700 3950
-F 0 "#PWR0127" H 700 3800 50  0001 C CNN
-F 1 "VCC" H 717 4123 50  0000 C CNN
-F 2 "" H 700 3950 50  0001 C CNN
-F 3 "" H 700 3950 50  0001 C CNN
-	1    700  3950
+P 600 4000
+F 0 "#PWR0127" H 600 3850 50  0001 C CNN
+F 1 "VCC" H 617 4173 50  0000 C CNN
+F 2 "" H 600 4000 50  0001 C CNN
+F 3 "" H 600 4000 50  0001 C CNN
+	1    600  4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	750  4000 700  4000
-Wire Wire Line
-	700  4000 700  3950
 Connection ~ 4000 4600
 Wire Wire Line
 	4000 4600 4300 4600
@@ -953,7 +907,7 @@ Connection ~ 5050 4300
 Wire Wire Line
 	5050 4300 5100 4300
 $Comp
-L Mechanical:MountingHole H3
+L mosfet-driver-rescue:MountingHole-Mechanical H3
 U 1 1 5E33AEBB
 P 6300 7150
 F 0 "H3" H 6400 7196 50  0000 L CNN
@@ -964,7 +918,7 @@ F 3 "~" H 6300 7150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
+L mosfet-driver-rescue:MountingHole-Mechanical H4
 U 1 1 5E33B367
 P 6300 7350
 F 0 "H4" H 6400 7396 50  0000 L CNN
@@ -975,7 +929,7 @@ F 3 "~" H 6300 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H1
+L mosfet-driver-rescue:MountingHole-Mechanical H1
 U 1 1 5E33B594
 P 6300 6750
 F 0 "H1" H 6400 6796 50  0000 L CNN
@@ -986,7 +940,7 @@ F 3 "~" H 6300 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
+L mosfet-driver-rescue:MountingHole-Mechanical H2
 U 1 1 5E33B59E
 P 6300 6950
 F 0 "H2" H 6400 6996 50  0000 L CNN
@@ -1130,128 +1084,204 @@ F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 5800 2800 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
-U 1 1 5DD03CF9
-P 5900 3050
-F 0 "#PWR06" H 5900 2800 50  0001 C CNN
-F 1 "GND" H 5905 2877 50  0000 C CNN
-F 2 "" H 5900 3050 50  0001 C CNN
-F 3 "" H 5900 3050 50  0001 C CNN
-	1    5900 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5900 3000 5900 3050
-Wire Wire Line
-	6800 2550 6800 3250
-$Comp
-L Connector:Screw_Terminal_01x02 J5
-U 1 1 5E2B429C
-P 7000 3250
-F 0 "J5" H 7080 3242 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 7080 3151 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 7000 3250 50  0001 C CNN
-F 3 "~" H 7000 3250 50  0001 C CNN
-	1    7000 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 3350 6800 3600
-$Comp
 L Device:LED D4
 U 1 1 5E2DA4D4
-P 700 5500
-F 0 "D4" H 693 5716 50  0000 C CNN
-F 1 "LED" H 693 5625 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 700 5500 50  0001 C CNN
-F 3 "~" H 700 5500 50  0001 C CNN
-	1    700  5500
-	0    -1   -1   0   
+P 1200 4000
+F 0 "D4" H 1193 4216 50  0000 C CNN
+F 1 "LED" H 1193 4125 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 1200 4000 50  0001 C CNN
+F 3 "~" H 1200 4000 50  0001 C CNN
+	1    1200 4000
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 5E2DB81B
-P 700 5100
-F 0 "R11" H 770 5146 50  0000 L CNN
-F 1 "1k" H 770 5055 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 630 5100 50  0001 C CNN
-F 3 "~" H 700 5100 50  0001 C CNN
-	1    700  5100
-	1    0    0    -1  
+P 800 4000
+F 0 "R11" H 870 4046 50  0000 L CNN
+F 1 "1k" H 870 3955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 730 4000 50  0001 C CNN
+F 3 "~" H 800 4000 50  0001 C CNN
+	1    800  4000
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	750  4100 700  4100
 $Comp
 L power:GND #PWR0128
 U 1 1 5E302691
-P 700 5750
-F 0 "#PWR0128" H 700 5500 50  0001 C CNN
-F 1 "GND" H 705 5577 50  0000 C CNN
-F 2 "" H 700 5750 50  0001 C CNN
-F 3 "" H 700 5750 50  0001 C CNN
-	1    700  5750
+P 1150 4600
+F 0 "#PWR0128" H 1150 4350 50  0001 C CNN
+F 1 "GND" H 1155 4427 50  0000 C CNN
+F 2 "" H 1150 4600 50  0001 C CNN
+F 3 "" H 1150 4600 50  0001 C CNN
+	1    1150 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J4
 U 1 1 5E30267D
-P 950 4000
-F 0 "J4" H 1030 3992 50  0000 L CNN
-F 1 "PWR_IN" H 1030 3901 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 950 4000 50  0001 C CNN
-F 3 "~" H 950 4000 50  0001 C CNN
-	1    950  4000
+P 1350 4500
+F 0 "J4" H 1430 4492 50  0000 L CNN
+F 1 "PWR_IN" H 1430 4401 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 1350 4500 50  0001 C CNN
+F 3 "~" H 1350 4500 50  0001 C CNN
+	1    1350 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	700  5250 700  5350
+	950  4000 1050 4000
 Wire Wire Line
-	700  5650 700  5750
+	1350 4000 1450 4000
 $Comp
 L Device:R R12
 U 1 1 5E2EDFFF
-P 750 6600
-F 0 "R12" H 820 6646 50  0000 L CNN
-F 1 "1k" H 820 6555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 680 6600 50  0001 C CNN
-F 3 "~" H 750 6600 50  0001 C CNN
-	1    750  6600
+P 600 4800
+F 0 "R12" H 400 4950 50  0000 L CNN
+F 1 "1k" H 400 4850 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 530 4800 50  0001 C CNN
+F 3 "~" H 600 4800 50  0001 C CNN
+	1    600  4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D6
 U 1 1 5E2F744C
-P 750 7000
-F 0 "D6" H 743 7216 50  0000 C CNN
-F 1 "LED" H 743 7125 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 750 7000 50  0001 C CNN
-F 3 "~" H 750 7000 50  0001 C CNN
-	1    750  7000
+P 600 5200
+F 0 "D6" H 593 5416 50  0000 C CNN
+F 1 "LED" H 593 5325 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 600 5200 50  0001 C CNN
+F 3 "~" H 600 5200 50  0001 C CNN
+	1    600  5200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	750  6750 750  6850
+	600  4950 600  5050
 Wire Wire Line
-	750  7150 750  7300
-Wire Wire Line
-	700  6300 800  6300
-Wire Wire Line
-	800  6400 750  6400
-Wire Wire Line
-	750  6400 750  6450
+	600  5350 600  5500
 $Comp
 L Switch:SW_DIP_x01 SW1
 U 1 1 5E3621E7
-P 700 4600
-F 0 "SW1" V 654 4730 50  0000 L CNN
-F 1 "SW_DIP_x01" V 745 4730 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile" H 700 4600 50  0001 C CNN
-F 3 "~" H 700 4600 50  0001 C CNN
-	1    700  4600
+P 600 4300
+F 0 "SW1" V 554 4430 50  0000 L CNN
+F 1 "SW_DIP_x01" V 645 4430 50  0000 L CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile" H 600 4300 50  0001 C CNN
+F 3 "~" H 600 4300 50  0001 C CNN
+	1    600  4300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	700  4100 700  4300
+	600  4000 650  4000
 Wire Wire Line
-	700  4900 700  4950
+	4600 2900 4600 3100
+Wire Wire Line
+	1150 4500 850  4500
+Wire Wire Line
+	850  4500 850  4600
+Wire Wire Line
+	850  4600 600  4600
+Connection ~ 600  4000
+$Comp
+L power:GND #PWR0125
+U 1 1 5E561B74
+P 1450 4000
+F 0 "#PWR0125" H 1450 3750 50  0001 C CNN
+F 1 "GND" H 1455 3827 50  0000 C CNN
+F 2 "" H 1450 4000 50  0001 C CNN
+F 3 "" H 1450 4000 50  0001 C CNN
+	1    1450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 5E566C85
+P 1150 5100
+F 0 "#PWR0130" H 1150 4850 50  0001 C CNN
+F 1 "GND" H 1155 4927 50  0000 C CNN
+F 2 "" H 1150 5100 50  0001 C CNN
+F 3 "" H 1150 5100 50  0001 C CNN
+	1    1150 5100
+	1    0    0    -1  
+$EndComp
+Connection ~ 600  4600
+Wire Wire Line
+	1150 5000 850  5000
+Wire Wire Line
+	850  5000 850  4600
+Connection ~ 850  4600
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5DD0C9C4
+P 7000 3600
+F 0 "J2" H 7080 3592 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7080 3501 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7000 3600 50  0001 C CNN
+F 3 "~" H 7000 3600 50  0001 C CNN
+	1    7000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 CS1
+U 1 1 5E2B429C
+P 6350 3600
+F 0 "CS1" H 6430 3592 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6430 3501 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-396_A-41791-0002_1x02_P3.96mm_Vertical" H 6350 3600 50  0001 C CNN
+F 3 "~" H 6350 3600 50  0001 C CNN
+	1    6350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3000 6150 3000
+Wire Wire Line
+	6150 3000 6150 3350
+Wire Wire Line
+	5900 5100 6450 5100
+Wire Wire Line
+	6450 5100 6450 3900
+Wire Wire Line
+	6450 3900 5950 3900
+Wire Wire Line
+	5950 3900 5950 3600
+Wire Wire Line
+	5950 3600 6150 3600
+Connection ~ 6150 3600
+$Comp
+L power:GND #PWR0131
+U 1 1 5E55D38B
+P 6150 3700
+F 0 "#PWR0131" H 6150 3450 50  0001 C CNN
+F 1 "GND" H 6155 3527 50  0000 C CNN
+F 2 "" H 6150 3700 50  0001 C CNN
+F 3 "" H 6150 3700 50  0001 C CNN
+	1    6150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 5E55D54F
+P 5550 3650
+F 0 "SW2" V 5504 3780 50  0000 L CNN
+F 1 "SW_DIP_x01" V 5595 3780 50  0000 L CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile" H 5550 3650 50  0001 C CNN
+F 3 "~" H 5550 3650 50  0001 C CNN
+	1    5550 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 3350 6150 3350
+Connection ~ 6150 3350
+Wire Wire Line
+	6150 3350 6150 3600
+$Comp
+L power:GND #PWR0132
+U 1 1 5E561AB7
+P 5550 3950
+F 0 "#PWR0132" H 5550 3700 50  0001 C CNN
+F 1 "GND" H 5555 3777 50  0000 C CNN
+F 2 "" H 5550 3950 50  0001 C CNN
+F 3 "" H 5550 3950 50  0001 C CNN
+	1    5550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2550 6800 3600
 $EndSCHEMATC
